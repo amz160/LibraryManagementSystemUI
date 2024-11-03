@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.library.librarymanagementsystemui.UpdateAccountController" alignment="CENTER" spacing="10">
+    <Label text="Update Account Information" style="-fx-font-size: 24px;"/>
+
+    <!-- Display Current Account Information -->
+    <Label fx:id="currentEmailLabel" text="Current Email: " style="-fx-font-weight: bold;"/>
+    <Label fx:id="currentPasswordLabel" text="Current Password: " style="-fx-font-weight: bold;"/>
+
+    <!-- Form to Update Account Information -->
+    <TextField fx:id="newEmailField" promptText="Enter new email (optional)"/>
+    <PasswordField fx:id="newPasswordField" promptText="Enter new password (optional)"/>
+
+    <!-- Submit and Cancel Buttons -->
+    <HBox spacing="10">
+        <Button text="Update" onAction="#handleUpdateAccount"/>
+        <Button text="Cancel" onAction="#handleCancel"/>
+    </HBox>
+</VBox>

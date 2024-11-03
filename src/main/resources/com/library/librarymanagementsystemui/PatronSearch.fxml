@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.library.librarymanagementsystemui.PatronSearchController" alignment="CENTER" spacing="10">
+    <Label text="Book Search" style="-fx-font-size: 24px;"/>
+
+    <!-- Search bar -->
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="Enter title, author, or genre" prefWidth="300"/>
+        <Button text="Search" onAction="#handleSearch"/>
+    </HBox>
+
+    <!-- Table to display search results -->
+    <TableView fx:id="searchResultsTable" prefHeight="400" prefWidth="800">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200" />
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="200" />
+            <TableColumn fx:id="genreColumn" text="Genre" prefWidth="200" />
+            <TableColumn fx:id="actionColumn" text="Action" prefWidth="200"/>
+        </columns>
+    </TableView>
+</VBox>

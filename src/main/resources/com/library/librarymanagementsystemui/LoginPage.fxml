@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.library.librarymanagementsystemui.MainController" alignment="CENTER" spacing="10">
+    <Label text="Library Management System" style="-fx-font-size: 24px;"/>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Email:"/>
+        <TextField fx:id="emailField"/>
+        <Label text="Password:"/>
+        <PasswordField fx:id="passwordField"/>
+    </HBox>
+
+    <Button fx:id="loginButton" text="Login" onAction="#handleLogin"/>
+    <Button fx:id="logoutButton" text="Logout" onAction="#handleLogout" visible="false"/>
+
+    <!-- Both controls -->
+    <Button fx:id="createPatronButton" text="Create Patron" onAction="#openCreatePatronPage" visible="false"/>
+
+    <!-- Librarian controls -->
+    <Button fx:id="addBookButton" text="Add Book" onAction="#openAddBookPage" visible="false"/>
+    <Button fx:id="manageBooksButton" text="Manage Books" onAction="#openManageBooksPage" visible="false"/>
+
+    <!-- Patron controls -->
+    <Button fx:id="searchBooksButton" text="Search Books" onAction="#openPatronSearchPage" visible="false"/>
+    <Button fx:id="borrowedBooksButton" text="Borrowed Books" onAction="#openBorrowedBooksPage" visible="false"/>
+    <Button fx:id="wishlistButton" text="Wishlist" onAction="#openWishlistPage" visible="false"/>
+    <Button fx:id="updateAccountButton" text="Update Account Information" onAction="#openUpdateAccountPage" visible="false"/>
+</VBox>
