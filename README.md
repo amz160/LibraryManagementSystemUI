@@ -2,8 +2,8 @@
 The Library Management System is designed to help librarians manage a library catalog and allow patrons to search, borrow easily, and track books. The system uses a MySQL database to store all data, including books, patrons, wishlists, and transactions.
 
 ## Features
-* Librarians can add, create, and delete books.
-* Patrons can create accounts, search books, borrow/return books, and manage wishlists.
+* Librarians can add, create, delete books, manage patron accounts, and view patron transactions.
+* Patrons can create accounts, search books, borrow/return/reserve books, and manage wishlists.
 * The MySQL database stores all library information and tracks transactions.
 
 ## Installation
@@ -12,7 +12,7 @@ The Library Management System is designed to help librarians manage a library ca
 3. Open DatabaseConnection.java and update the following with your MySQL credentials
 
 ```java
-private static final String URL = "jdbc:mysql://localhost:3306/LibraryDB";
+private static final String URL = "jdbc:mysql://127.0.0.1:3306/librarydb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 private static final String USERNAME = "USERNAME";
 private static final String PASSWORD = "PASSWORD";
 ```
