@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.library.librarymanagementsystemui.MainController">
+
+    <!-- Header -->
+    <top>
+        <VBox>
+            <!-- Header Bar -->
+            <HBox spacing="10" style="-fx-background-color: #60cbf4; -fx-padding: 10; -fx-alignment: center-left;">
+                <Label text="Library Management System" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: black;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <VBox spacing="5">
+                    <TextField fx:id="emailField" promptText="Email"/>
+                    <PasswordField fx:id="passwordField" promptText="Password"/>
+                    <Button fx:id="loginButton" text="Login" onAction="#handleLogin" visible="true" managed="true"/>
+                    <Button fx:id="logoutButton" text="Logout" onAction="#handleLogout" visible="false" managed="false"/>
+                    <Button fx:id="createPatronButton" text="Create Account" onAction="#openCreatePatronPage"/>
+                </VBox>
+
+            </HBox>
+
+            <!-- Navigation Bar -->
+            <HBox spacing="10" style="-fx-background-color: #46b1e1; -fx-padding: 10;">
+                <Button fx:id="homeButton" text="Home" onAction="#showHomePage"/>
+                <Button fx:id="updateAccountButton" text="Update Account" onAction="#showUpdateAccountPage" visible="false" managed="false"/>
+                <Button fx:id="borrowedBooksButton" text="Borrowed Books" onAction="#showBorrowedBooksPage" visible="false" managed="false"/>
+                <Button fx:id="wishlistButton" text="Wishlist" onAction="#showWishlistPage" visible="false" managed="false"/>
+                <Button fx:id="reservationsButton" text="My Reservations" onAction="#showReservationsPage" visible="false" managed="false"/>
+                <Button fx:id="searchBooksButton" text="Search Books" onAction="#showSearchBooksPage" visible="false" managed="false"/>
+                <Button fx:id="addBookButton" text="Add Book" onAction="#showAddBookPage" visible="false" managed="false"/>
+                <Button fx:id="manageBooksButton" text="Manage Books" onAction="#showManageBooksPage" visible="false" managed="false"/>
+                <Button fx:id="viewTransactionsButton" text="View Transactions" onAction="#showTransactionsPage" visible="false" managed="false"/>
+                <Button fx:id="managePatronsButton" text="Manage Patrons" onAction="#showManagePatronsPage" visible="false" managed="false"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Dynamic Content Pane -->
+    <center>
+        <StackPane fx:id="contentPane">
+            <VBox fx:id="homePage" visible="true" managed="true"/>
+        </StackPane>
+    </center>
+</BorderPane>

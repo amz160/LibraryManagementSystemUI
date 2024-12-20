@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.library.librarymanagementsystemui.ReturnBooksController" spacing="15" style="-fx-padding: 20; -fx-alignment: top-center;">
+    <Label text="Borrowed Books" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <TableView fx:id="borrowedBooksTable" maxHeight="400" maxWidth="700">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200" />
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="200" />
+            <TableColumn fx:id="dueDateColumn" text="Due Date" prefWidth="200" />
+            <TableColumn fx:id="actionColumn" text="Return Book" prefWidth="100" />
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.library.librarymanagementsystemui.CreatePatronController" spacing="15" style="-fx-padding: 20; -fx-alignment: top-center;">
+    <Label text="Create New Patron" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <VBox spacing="10" alignment="CENTER">
+        <TextField fx:id="nameField" promptText="Name" maxWidth="300" />
+        <TextField fx:id="emailField" promptText="Email" maxWidth="300" />
+        <PasswordField fx:id="passwordField" promptText="Password" maxWidth="300" />
+    </VBox>
+    <Button text="Submit" onAction="#handleCreatePatron" style="-fx-font-size: 14px;" maxWidth="150" />
+</VBox>

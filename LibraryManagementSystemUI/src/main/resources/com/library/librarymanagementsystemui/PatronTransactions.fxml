@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.library.librarymanagementsystemui.PatronTransactionsController" spacing="15" style="-fx-padding: 20; -fx-alignment: top-center;">
+    <Label text="Patron Transactions" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <TableView fx:id="transactionsTable" maxHeight="400" maxWidth="810">
+        <columns>
+            <TableColumn fx:id="patronIdColumn" text="Patron ID" prefWidth="80" />
+            <TableColumn fx:id="patronNameColumn" text="Patron Name" prefWidth="140" />
+            <TableColumn fx:id="bookIdColumn" text="Book ID" prefWidth="80" />
+            <TableColumn fx:id="bookTitleColumn" text="Book Title" prefWidth="180" />
+            <TableColumn fx:id="borrowDateColumn" text="Borrow Date" prefWidth="120" />
+            <TableColumn fx:id="dueDateColumn" text="Due Date" prefWidth="120" />
+            <TableColumn fx:id="returnDateColumn" text="Return Date" prefWidth="120" />
+        </columns>
+    </TableView>
+</VBox>

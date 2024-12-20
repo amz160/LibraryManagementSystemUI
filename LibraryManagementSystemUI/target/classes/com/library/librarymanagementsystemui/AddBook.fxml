@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.library.librarymanagementsystemui.AddBookController" spacing="15" style="-fx-padding: 20; -fx-alignment: top-center;">
+    <Label text="Add New Book" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <VBox spacing="10" alignment="CENTER">
+        <TextField fx:id="titleField" promptText="Title" maxWidth="300" />
+        <TextField fx:id="authorField" promptText="Author" maxWidth="300" />
+        <TextField fx:id="genreField" promptText="Genre" maxWidth="300" />
+        <TextField fx:id="yearField" promptText="Year" maxWidth="300" />
+    </VBox>
+    <Button text="Submit" onAction="#handleAddBook" style="-fx-font-size: 14px;" maxWidth="150" />
+</VBox>
